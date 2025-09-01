@@ -3,13 +3,17 @@
 @import "tailwindcss";
 
 body {
-    font-family: "Roboto Condensed", sans-serif;
+    font-family: "Poppins", sans-serif;
 }
 
-@theme {
+/* @theme {
   --color-primary: '#001E62';
   --color-white: '#ffffff';
   --color-red: '#FF2E2E';
   
   --color-icon-bg: '#FF5C5C'
+} */
+
+.px-custom {
+  @apply px-5 md:px-[3.75rem];
 }
