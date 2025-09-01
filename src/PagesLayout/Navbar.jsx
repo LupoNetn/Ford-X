@@ -58,7 +58,7 @@ const Navbar = () => {
                 </button>
 
                 {/* Links */}
-                <div className="bg-gradient from-blue-100 to-gray-500 shadow-md rounded-lg p-10 absolute right-7">
+                <div className="bg-white shadow-md rounded-lg p-10 absolute right-7 h-screen">
                   <div className="flex flex-col md:hidden gap-10 items-left">
                     <ul className="flex flex-col gap-10 items-left">
                       {navLinks.map((item, idx) => (
