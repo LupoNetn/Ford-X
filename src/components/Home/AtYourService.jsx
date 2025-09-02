@@ -1,58 +1,71 @@
-import { Dot } from 'lucide-react'
-import React from 'react'
+//import { Dot } from "lucide-react";
+import React from "react";
 
 const AtYourService = () => {
   return (
-    <>
-     <div className='px-custom mt-5 md:my-10 flex flex-col items-center md:flex-row md:justify-between relative overflow-x-clip'>
-        <div className='md:order-2 md:-mr-70 md:mt-30'>
-            <img
-              className="w-[100vw] max-w-[900px] md:w-[600px] lg:w-[900px] xl:w-[800px]"
-              src="/truck.jpeg"
-              alt=""
-            />
-        </div>
-        <div className='md:order-1'>
-
-          <div className='flex items-center'>
-            <span className=''><Dot size={80} className='text-red-500'/></span>
-            <h4 className='text-2xl text-blue-950 font-bold'>FORDX AT YOUR SERVICE</h4>
+    <section className="relative overflow-hidden px-4 md:px-12 lg:px-20 py-10 md:py-16 bg-white">
+      <div className="flex flex-col-reverse md:flex-row items-center justify-between gap-10 md:gap-16 relative">
+        
+        {/* Text Section */}
+        <div className="w-full lg:w-1/2 space-y-6">
+          {/* Heading with Dot */}
+          <div className="flex items-center gap-2">
+            <span>🔴</span>
+            <h4 className="text-md font-semibold text-blue-950 tracking-wide">
+              FORDX AT YOUR SERVICE
+            </h4>
           </div>
 
-          <h3 className='text-blue-950 text-4xl md:text-6xl '>
-            We Peovide <span className='text-red-500'>End-to-end Logistics Services</span> for Timely Secure Delivery.
-          </h3>
+          {/* Main Title */}
+          <h2 className="text-3xl md:text-2xl lg:text-4xl font-bold text-blue-950 leading-snug">
+            We Provide{" "}
+            <span className="text-red-500">End-to-end Logistics Services</span>{" "}
+            for Timely & Secure Delivery.
+          </h2>
 
-          <div className='mt-5 flex flex-col gap-5'>
-            <div className='flex justify-between gap-20'>
-
-              <div className='text-lg text-red-500'>
+          {/* Vision & Mission */}
+          <div className="space-y-8">
+            {/* Vision */}
+            <div className="flex flex-col lg:flex-row md:items-start lg:gap-14">
+              <div className="text-xl font-semibold text-red-500 min-w-[80px]">
                 <p>01</p>
                 <p>Vision</p>
               </div>
-
-              <div>
-                <p>Our mission is to lead the global logistics industry by providing seamless, reliable, and innovative solutions that not only meet but exceed client expectations, driving long-term success and growth for buisnesses worldwide.</p>
-              </div>
-
+              <p className="text-gray-700 leading-relaxed md:text-sm lg:text-base">
+                Our mission is to lead the global logistics industry by providing
+                seamless, reliable, and innovative solutions that not only meet
+                but exceed client expectations, driving long-term success and
+                growth for businesses worldwide.
+              </p>
             </div>
-            <div className='flex justify-between gap-20'>
 
-              <div className='text-lg text-red-500'>
+            {/* Mission */}
+            <div className="flex flex-col lg:flex-row md:items-start lg:gap-14">
+              <div className="text-xl font-semibold text-red-500 min-w-[80px]">
                 <p>02</p>
                 <p>Mission</p>
               </div>
-
-              <div>
-                <p>We connect buisnesses to a streamlined and efficient supply cahin by offering innovative and responsible logistics solutions that enhance operational performance, reduce costs, and fostre growth in a dynamic global market</p>
-              </div>
-
+              <p className="text-gray-700 leading-relaxed md:text-sm lg:text-base">
+                We connect businesses to a streamlined and efficient supply
+                chain by offering innovative and responsible logistics solutions
+                that enhance operational performance, reduce costs, and foster
+                growth in a dynamic global market.
+              </p>
             </div>
           </div>
         </div>
-     </div>
-    </>
-  )
-}
 
-export default AtYourService
+        {/* Image Section */}
+        <div className="w-full md:w-1/2 relative">
+          <img
+            src="/truck.jpeg"
+            alt="Logistics Truck"
+            className="w-[120%] md:w-[140%] lg:w-[160%] max-w-none object-contain md:translate-x-10 lg:translate-x-20"
+          />
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default AtYourService;
