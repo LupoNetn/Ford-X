@@ -36,19 +36,19 @@ const FreightSolution = () => {
       label: "Reliability",
       icon: <CheckCircle size={40} />,
       desc: "We ensure everydelivery meets our high standards, from start to finish",
-      grid: "md:row-start-1 md:row-end-3 flex flex-col justify-between",
+      grid: "md:row-start-1 md:row-end-3  flex flex-col justify-between",
     },
     {
       label: "Innovation",
       icon: <LightbulbIcon size={40} />,
       desc: "Embracing the latest technology for a seamless logistics experience.",
-      grid: "md:row-start-3 md:row-end-6 flex flex-col justify-between",
+      grid: "md:row-start-3 md:row-end-6  flex flex-col justify-between",
     },
     {
       label: "Customer",
       icon: <Group size={40} />,
       desc: "Your needs are our priority - every mile of the journey",
-      grid: "md:row-start-4 md:row-end-6 flex flex-col justify-between",
+      grid: "md:row-start-4 md:row-end-6  flex flex-col justify-between",
     },
     {
       label: "Sustainability",
@@ -71,7 +71,7 @@ const FreightSolution = () => {
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6 ">
           {freightSolution.map((items, idx) => (
             <div
               key={idx}
@@ -113,7 +113,7 @@ const FreightSolution = () => {
               integrity, quality and accountability
             </p>
           </div>
-          <div className="flex-1 grid grid-cols-1 sm:grid-cols-2 grid-rows-6 gap-4">
+          <div className="flex-1 grid grid-cols-1 sm:grid-cols-2 md:grid-rows-6 gap-4">
             {values.map((value, idx) => (
               <div
                 key={idx}
