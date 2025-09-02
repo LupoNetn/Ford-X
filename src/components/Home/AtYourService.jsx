@@ -16,10 +16,10 @@ const AtYourService = () => {
 
           <div className='flex items-center'>
             <span className=''><Dot size={80} className='text-red-500'/></span>
-            <h4 className='text-2xl text-blue-950 font-bold'>FORDX AT YOUR SERVICE</h4>
+            <h4 className='text-xl text-blue-950 font-bold'>FORDX AT YOUR SERVICE</h4>
           </div>
 
-          <h3 className='text-blue-950 text-4xl md:text-6xl '>
+          <h3 className='text-blue-950 text-3xl md:text-6xl '>
             We Peovide <span className='text-red-500'>End-to-end Logistics Services</span> for Timely Secure Delivery.
           </h3>
 
