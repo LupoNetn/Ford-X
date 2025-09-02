@@ -32,7 +32,7 @@ const FreightSolution = () => {
 
   return (
     <>
-      <div className="px-custom mt-5 md:mt-7 lg:mt-10">
+      <div className="mt-5 md:mt-7 lg:mt-10">
         <div className="text-center space-y-4 mb-6">
           <p className="text-blue-950 text-xs md:text-md">
             <span>🔴</span>OUR FREIGHT SOLUTION
@@ -59,7 +59,7 @@ const FreightSolution = () => {
                 <h3 className="font-bold bg-black/40 text-white border border-white/20 px-3 py-1 rounded-2xl w-fit text-lg mb-2 shadow">
                   {items.label}
                 </h3>
-                <p className="text-white text-base md:text-2xl w-[95%] drop-shadow">
+                <p className="text-white text-base md:text-xl lg:text-2xl w-[95%] drop-shadow">
                   {items.desc}
                 </p>
               </div>
