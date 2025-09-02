@@ -24,7 +24,7 @@ const AtYourService = () => {
           </h3>
 
           <div className='mt-5 flex flex-col gap-5'>
-            <div className='flex justify-between gap-20'>
+            <div className='flex flex-col md:flex-row justify-between gap-20'>
 
               <div className='text-lg text-red-500'>
                 <p>01</p>
