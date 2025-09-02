@@ -15,5 +15,5 @@ body {
 } */
 
 .px-custom {
-  @apply px-5 md:px-[3.75rem];
+  @apply px-3 lg:px-5 md:px-[2.75rem];
 }

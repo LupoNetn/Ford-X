@@ -7,7 +7,7 @@ import FreightSolution from "../components/Home/FreightSolution";
 const HomePage = () => {
   return (
     <>
-      <div className="px-4 md:mt-7">
+      <div className="px-custom md:mt-7">
        
        {/* Hero */}
         <Hero />
