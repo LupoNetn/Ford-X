@@ -47,7 +47,7 @@ const FreightSolution = () => {
           {freightSolution.map((items, idx) => (
             <div
               key={idx}
-              className="relative rounded-2xl border overflow-hidden shadow-lg bg-cover bg-center min-h-[300px] flex flex-col justify-center w-full mx-auto transition-transform duration-300 hover:scale-[1.025]"
+              className="relative rounded-2xl overflow-hidden shadow-lg bg-cover bg-center min-h-[300px] flex flex-col justify-center w-full mx-auto transition-transform duration-300 hover:scale-[1.025]"
               style={{
                 backgroundImage: `url(${images[items.src]})`,
               }}
