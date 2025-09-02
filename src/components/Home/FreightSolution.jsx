@@ -113,7 +113,7 @@ const FreightSolution = () => {
               integrity, quality and accountability
             </p>
           </div>
-          <div className="flex-1 grid grid-cols-1 sm:grid-cols-2 md:grid-rows-6 gap-4">
+          <div className="flex-1 grid grid-cols-1 sm:grid-cols-2 lg:grid-rows-6 gap-4">
             {values.map((value, idx) => (
               <div
                 key={idx}
