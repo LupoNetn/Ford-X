@@ -5,28 +5,32 @@ const Hero = () => {
   return (
     <>
       {/* ---------- Mobile Headline ---------- */}
-      <div className="md:hidden text-blue-950 text-left flex flex-col gap-6 mt-7 mb-12 px-2">
+      <div className="md:hidden text-blue-950 text-left flex flex-col gap-5 mt-8 mb-12 px-4">
         <h1 className="text-4xl xs:text-5xl font-extrabold leading-tight tracking-tight">
-          <span className="block text-blue-950">Delivering</span>
+          <span className="block">Delivering</span>
           <span className="block text-red-500">More Than</span>
-          <span className="block text-blue-950">Just Freight</span>
+          <span className="block">Just Freight</span>
         </h1>
         <p className="text-base xs:text-lg font-medium text-blue-900/90 leading-relaxed">
-          We prioritize <span className="text-red-500 font-semibold">reliability</span>, <span className="text-red-500 font-semibold">precision</span>, and strong partnerships in every shipment, ensuring a seamless and efficient logistics experience from start to finish.
+          We prioritize{" "}
+          <span className="text-red-500 font-semibold">reliability</span>,{" "}
+          <span className="text-red-500 font-semibold">precision</span>, and
+          strong partnerships in every shipment, ensuring a seamless and
+          efficient logistics experience from start to finish.
         </p>
 
-        <div className="flex flex-col gap-3 mt-2 w-full xs:w-[80%]">
-          <button className="flex gap-3 items-center bg-blue-950 text-amber-50 px-4 py-2 rounded-[40px] font-semibold text-base shadow hover:bg-blue-900 transition">
-            Get Started{" "}
-            <span className="bg-white text-blue-950 p-1 rounded-full">
-              <ArrowBigRight />
+        <div className="flex flex-col gap-3 mt-3 w-full xs:w-[80%]">
+          <button className="flex gap-3 items-center bg-blue-950 text-white px-5 py-3 rounded-full font-semibold text-lg shadow-md hover:bg-blue-900 transition">
+            Get Started
+            <span className="bg-white text-blue-950 p-1.5 rounded-full">
+              <ArrowBigRight size={18} />
             </span>
           </button>
 
-          <button className="flex gap-3 items-center bg-white text-blue-950 border border-blue-950 px-4 py-2 rounded-[40px] font-semibold text-base shadow hover:bg-blue-50 transition">
-            Learn More{" "}
-            <span className="bg-blue-950 text-white p-1 rounded-full">
-              <ArrowBigRight />
+          <button className="flex gap-3 items-center bg-white text-blue-950 border border-blue-950 px-5 py-3 rounded-full font-semibold text-lg shadow-md hover:bg-blue-50 transition">
+            Learn More
+            <span className="bg-blue-950 text-white p-1.5 rounded-full">
+              <ArrowBigRight size={18} />
             </span>
           </button>
         </div>
@@ -43,7 +47,6 @@ const Hero = () => {
           viewBox="0 0 1200 700"
           preserveAspectRatio="xMidYMid slice"
         >
-          {/* Glow */}
           <path
             d="M1100 90 L1100 440 Q1100 610 950 610 L320 610 Q220 610 220 520 L220 360"
             fill="none"
@@ -52,7 +55,6 @@ const Hero = () => {
             strokeLinecap="round"
             strokeLinejoin="round"
           />
-          {/* Main red line */}
           <path
             d="M1100 90 L1100 440 Q1100 610 950 610 L320 610 Q220 610 220 520 L220 360"
             fill="none"
@@ -61,58 +63,49 @@ const Hero = () => {
             strokeLinecap="round"
             strokeLinejoin="round"
           />
-          {/* Start marker */}
           <circle cx="220" cy="360" r="22" fill="#fff" />
           <circle cx="220" cy="360" r="12" fill="#ef4444" />
         </svg>
 
-        {/* ---------- Floating Cards + Connector Arches ---------- */}
-
-        {/* Port of Singapore (top-right) */}
+        {/* ---------- Floating Cards ---------- */}
         <div className="absolute z-30 top-[12%] right-4 flex items-center gap-2">
-          <span className="bg-white text-blue-950 rounded-full p-2 shadow relative z-10">
+          <span className="bg-white text-blue-950 rounded-full p-2 shadow">
             <LocationEditIcon size={16} />
           </span>
-          <div className="bg-white/90 backdrop-blur rounded-3xl px-3 py-1 shadow border border-white/60 relative z-10">
+          <div className="bg-white/90 backdrop-blur rounded-2xl px-3 py-1 shadow border border-white/60">
             <p className="text-xs font-medium whitespace-nowrap">
               The Port of Singapore
             </p>
           </div>
         </div>
 
-        {/* Bound for China */}
         <div className="absolute z-30 top-[28%] left-[62%] flex flex-col items-center">
-          <div className="px-3 py-1 rounded-full bg-white/85 backdrop-blur border border-white/60 shadow relative z-10">
-            <p className="text-xs font-medium whitespace-nowrap">
-              Bound for China
-            </p>
-            <p className="text-[10px] opacity-60 -mt-0.5">ETA: 1 Week</p>
+          <div className="px-3 py-1 rounded-full bg-white/85 backdrop-blur border border-white/60 shadow">
+            <p className="text-xs font-semibold">Bound for China</p>
+            <p className="text-[11px] opacity-70">ETA: 1 Week</p>
           </div>
         </div>
 
-        {/* Bound for Germany */}
         <div className="absolute z-30 top-[48%] left-[42%] flex flex-col items-center">
-          <div className="px-3 py-1 rounded-full bg-white/85 backdrop-blur border border-white/60 shadow relative z-10">
-            <p className="text-xs font-medium whitespace-nowrap">
-              Bound for Germany
-            </p>
-            <p className="text-[10px] opacity-60 -mt-0.5">ETA: 5 Days</p>
+          <div className="px-3 py-1 rounded-full bg-white/85 backdrop-blur border border-white/60 shadow">
+            <p className="text-xs font-semibold">Bound for Germany</p>
+            <p className="text-[11px] opacity-70">ETA: 5 Days</p>
           </div>
         </div>
 
-        {/* Bottom-right Info Card */}
-        <div className="absolute z-30 bottom-12 right-4 sm:right-6 w-[200px] sm:w-[240px] md:p-3 p-2 flex items-center gap-3 bg-white text-blue-950 rounded-xl md:rounded-2xl shadow-lg">
-          <div className="min-w-0 relative z-10">
-            <p className="text-[12px] leading-tight">
-              We <span className="text-red-500 font-semibold">cover</span>{" "}
-              shipment around the{" "}
+        <div className="absolute z-30 bottom-12 right-4 sm:right-6 w-[200px] sm:w-[240px] p-3 flex items-center gap-3 bg-white text-blue-950 rounded-xl shadow-lg">
+          <div className="min-w-0">
+            <p className="text-[13px] leading-tight">
+              We{" "}
+              <span className="text-red-500 font-semibold">cover</span> shipment
+              around the{" "}
               <span className="text-red-500 font-semibold">globe</span>
             </p>
             <div className="flex gap-2 mt-2">
-              <span className="bg-blue-950 text-white rounded-full p-1">
+              <span className="bg-blue-950 text-white rounded-full p-1.5">
                 <Play size={16} />
               </span>
-              <span className="bg-white text-blue-950 rounded-full p-1 border border-blue-950/20">
+              <span className="bg-white text-blue-950 rounded-full p-1.5 border border-blue-950/20">
                 <Expand size={16} />
               </span>
             </div>
@@ -128,28 +121,32 @@ const Hero = () => {
 
         {/* ---------- Desktop Headline ---------- */}
         <div className="relative z-30">
-          <div className="hidden text-white text-left w-[90%] md:w-[70%] lg:w-[50%] md:flex flex-col gap-6 mt-20 md:mt-32 lg:mt-40">
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight tracking-tight drop-shadow-lg">
-              <span className="block text-white">Delivering</span>
+          <div className="hidden text-white text-left w-[90%] md:w-[70%] lg:w-[55%] xl:w-[50%] md:flex flex-col gap-6 mt-20 md:mt-32 lg:mt-40">
+            <h1 className="text-6xl md:text-7xl lg:text-8xl font-extrabold leading-tight tracking-tight drop-shadow-lg">
+              <span className="block">Delivering</span>
               <span className="block text-red-500">More Than</span>
-              <span className="block text-white">Just Freight</span>
+              <span className="block">Just Freight</span>
             </h1>
-            <p className="text-lg md:text-xl font-medium text-white/90 leading-relaxed drop-shadow">
-              We prioritize <span className="text-red-400 font-semibold">reliability</span>, <span className="text-red-400 font-semibold">precision</span>, and strong partnerships in every shipment, ensuring a seamless and efficient logistics experience from start to finish.
+            <p className="text-lg md:text-xl lg:text-2xl font-medium text-white/90 leading-relaxed drop-shadow">
+              We prioritize{" "}
+              <span className="text-red-400 font-semibold">reliability</span>,{" "}
+              <span className="text-red-400 font-semibold">precision</span>, and
+              strong partnerships in every shipment, ensuring a seamless and
+              efficient logistics experience from start to finish.
             </p>
 
-            <div className="flex items-center gap-4 mt-2">
-              <button className="flex gap-3 items-center bg-blue-950 text-amber-50 px-4 py-2 rounded-[40px] font-semibold text-base shadow hover:bg-blue-900 transition">
-                Get Started{" "}
-                <span className="bg-white text-blue-950 p-1 rounded-full">
-                  <ArrowBigRight />
+            <div className="flex items-center gap-4 mt-3">
+              <button className="flex gap-3 items-center bg-blue-950 text-white px-6 py-3 rounded-full font-semibold text-lg shadow-md hover:bg-blue-900 transition">
+                Get Started
+                <span className="bg-white text-blue-950 p-1.5 rounded-full">
+                  <ArrowBigRight size={20} />
                 </span>
               </button>
 
-              <button className="flex gap-3 items-center bg-white text-blue-950 border border-blue-950 px-4 py-2 rounded-[40px] font-semibold text-base shadow hover:bg-blue-50 transition">
-                Learn More{" "}
-                <span className="bg-blue-950 text-white p-1 rounded-full">
-                  <ArrowBigRight />
+              <button className="flex gap-3 items-center bg-white text-blue-950 border border-blue-950 px-6 py-3 rounded-full font-semibold text-lg shadow-md hover:bg-blue-50 transition">
+                Learn More
+                <span className="bg-blue-950 text-white p-1.5 rounded-full">
+                  <ArrowBigRight size={20} />
                 </span>
               </button>
             </div>

@@ -1,6 +1,5 @@
 import { ArrowBigRight, Menu, X } from "lucide-react";
-import React from "react";
-import { useState } from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 const navLinks = [
@@ -17,6 +16,7 @@ const Navbar = () => {
     <>
       <nav className="px-custom py-5">
         <div className="flex justify-between items-center">
+          {/* Logo */}
           <div>
             <h1 className="text-4xl font-bold">
               Ford
@@ -25,16 +25,19 @@ const Navbar = () => {
               </span>
             </h1>
           </div>
+
+          {/* Desktop Links */}
           <div className="hidden sm:flex gap-10 items-center">
             <ul className="flex sm:gap-5 lg:gap-10 items-center">
               {navLinks.map((item, idx) => (
-                <button>
-                  <Link key={idx} to={item.link}>
-                    <li className="text-blue-950 md:text-sm lg:text-lg hover:text-blue-700">
-                      {item.name}
-                    </li>
+                <li key={idx}>
+                  <Link
+                    to={item.link}
+                    className="text-blue-950 md:text-sm lg:text-lg hover:text-blue-700"
+                  >
+                    {item.name}
                   </Link>
-                </button>
+                </li>
               ))}
             </ul>
             <button className="flex gap-3 items-center bg-blue-950 text-amber-50 px-4 py-2 rounded-[40px] md:text-sm lg:text-lg">
@@ -46,43 +49,47 @@ const Navbar = () => {
           </div>
 
           {/* Mobile Navigation */}
-
           <div className="block sm:hidden">
             {open ? (
-              <div className="relative">
-                <button
-                  onClick={() => setOpen((prev) => !prev)}
-                  className="cursor-pointer text-blue-950"
-                >
-                  <X size={30} />
-                </button>
+              <div className="fixed inset-0 bg-white z-50 flex flex-col p-8">
+                {/* Close button */}
+                <div className="flex justify-end mb-8">
+                  <button
+                    onClick={() => setOpen(false)}
+                    className="cursor-pointer text-blue-950"
+                  >
+                    <X size={32} />
+                  </button>
+                </div>
 
                 {/* Links */}
-                <div className="bg-white shadow-md rounded-lg p-10 absolute right-7 h-screen">
-                  <div className="flex flex-col md:hidden gap-10 items-left">
-                    <ul className="flex flex-col gap-10 items-left">
-                      {navLinks.map((item, idx) => (
-                        <button onClick={() => setOpen((prev) => !prev)}>
-                          <Link key={idx} to={item.link}>
-                            <li className="text-blue-950 text-lg hover:text-blue-700">
-                              {item.name}
-                            </li>
-                          </Link>
-                        </button>
-                      ))}
-                    </ul>
-                    <button className="flex gap-3 items-center bg-blue-950 text-amber-50 px-10 py-1 rounded-[40px] text-md">
-                      Get Started{" "}
-                      <span className="bg-white text-blue-950 p-1 rounded-full">
-                        <ArrowBigRight />
-                      </span>
-                    </button>
-                  </div>
+                <ul className="flex flex-col gap-6 text-left">
+                  {navLinks.map((item, idx) => (
+                    <li key={idx}>
+                      <Link
+                        to={item.link}
+                        onClick={() => setOpen(false)}
+                        className="text-blue-950 text-xl font-medium hover:text-blue-700"
+                      >
+                        {item.name}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+
+                {/* CTA Button */}
+                <div className="mt-10">
+                  <button className="flex gap-3 items-center bg-blue-950 text-amber-50 px-6 py-3 rounded-[40px] text-lg">
+                    Get Started{" "}
+                    <span className="bg-white text-blue-950 p-1 rounded-full">
+                      <ArrowBigRight />
+                    </span>
+                  </button>
                 </div>
               </div>
             ) : (
               <button
-                onClick={() => setOpen((prev) => !prev)}
+                onClick={() => setOpen(true)}
                 className="cursor-pointer text-blue-950"
               >
                 <Menu size={30} />
